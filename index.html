@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stilus.css">
+    <script src="script.js"></script>
+    <title>Regisztrációs oldal</title>
+</head>
+<body>
+    <main>
+        <h1>Azonosító adataid</h1>
+        <hr>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="email">email címed:</label></td>
+                    <td><input type="email" name="email" id="email" pattern="^[0-9a-z\.-]+@([0-9a-z-]+\.)+[a-z]{2,4}$"></td>
+                </tr>
+                <tr>
+                    <td><label for="psw">leendő jelszavad:</label></td>
+                    <td><input type="password" name="psw" id="psw" minlength="8" maxlength="16" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$_])[A-Za-z\d@$_]{8,16}$"></td>
+                </tr>
+                <tr>
+                    <td><label for="psw2">jelszavad még egyszer:</label></td>
+                    <td><input type="password" name="psw2" id="psw2" onblur="ell()"></td>
+                </tr>
+                <tr>
+                    <td><label for="date">születési éved:</label></td>
+                    <td><input type="number" name="date" id="date" min="1900" max="2022"></td>
+                </tr>
+                <tr>
+                    <td><label for="l-iranyitoszam">lakóhelyed irányítószáma:</label></td>
+                    <td><input type="text" name="" id="l-iranyitoszam" pattern="[1-9][0-9]{3}"></td>
+                </tr>
+                <tr>
+                    <td>iskolai végzettséged:</td>
+                    <td>
+                        <input type="radio" name="vegzettseg" id="v1" value="altalanos"><label for="v1">általános iskola</label><br>
+                        <input type="radio" name="vegzettseg" id="v2" value="kozep"><label for="v2">középiskola</label><br>
+                        <input type="radio" name="vegzettseg" id="v3" value="fo"><label for="v3">főiskola, egyetem</label>
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <hr>
+            <label for="felt">a regisztrációs feltételeket elfogadom:</label>
+            <input type="checkbox" name="felt" id="felt" required>
+            <hr>
+            <button type="submit">Regisztráció</button>
+            <button type="reset">Mezők tölése</button>
+        </form>
+    </main>
+</body>
+</html>
